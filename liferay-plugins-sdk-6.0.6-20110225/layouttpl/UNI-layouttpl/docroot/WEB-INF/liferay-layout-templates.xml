@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE layout-templates PUBLIC "-//Liferay//DTD Layout Templates 6.0.0//EN" "http://www.liferay.com/dtd/liferay-layout-templates_6_0_0.dtd">
+
+<layout-templates>
+	<custom>
+		<layout-template id="uni1" name="1-4-2-4-1">
+			<template-path>/uni1.tpl</template-path>
+			<wap-template-path>/uni1.wap.tpl</wap-template-path>
+			<thumbnail-path>/uni1.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="uni2" name="20-60-20">
+			<template-path>/uni2.tpl</template-path>
+			<wap-template-path>/uni2.wap.tpl</wap-template-path>
+			<thumbnail-path>/uni2.png</thumbnail-path>
+		</layout-template>
+	</custom>
+</layout-templates>

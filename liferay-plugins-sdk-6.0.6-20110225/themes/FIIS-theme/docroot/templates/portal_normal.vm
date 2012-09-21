@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+
+#if($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper">
+	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+
+	<header id="banner" role="banner">
+		<hgroup id="heading">
+			<h1 class="company-title">
+				<a href="$company_url" title="#language("go-to") $company_name">
+					<span>$company_name</span>
+				</a>
+			</h1>
+
+			<h2 class="community-title">
+				<a class="logo" href="$community_default_url" title="#language("go-to") $community_name">
+					<span>$community_name</span>
+				</a>
+			</h2>
+
+			<h3 class="page-title">
+				<span>$the_title</span>
+			</h3>
+		</hgroup>
+
+		#if(!$is_signed_in)
+			<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+		#end
+
+		#if ($update_available_url)
+			<div class="popup-alert-notice">
+				<a class="update-available" href="$update_available_url">#language("updates-are-available-for-liferay")</a>
+			</div>
+		#end
+		
+		<h1 class="idioma">
+			$velocityPortletPreferences.setValue("display-style", "0")
+			$velocityPortletPreferences.setValue("portlet-setup-show-borders", "false")
+			$theme.runtime("82", "", $velocityPortletPreferences.toString())
+			$velocityPortletPreferences.reset()
+        </h1>
+        
+        <div id="social">
+        	<a href="http://www.facebook.com" target="_blank"><img src="$images_folder/custom/facebook.png" /></a>
+        	<a href="http://www.twitter.com" target="_blank"><img src="$images_folder/custom/twitter.png" /></a>
+        	<a href="http://www.youtube.com" target="_blank"><img src="$images_folder/custom/youtube.png" /></a>
+        </div>
+        
+        #js("$javascript_folder/fecha.js")
+        <div id="fecha">
+        </div>
+		
+		#if ($has_navigation)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<div id="content">
+		<!-- <nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>#language("breadcrumbs")</span>
+			</h1>
+
+			#breadcrumbs()
+		</nav> -->
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		<p class="copyright-notice">UNIVERSIDAD NACIONAL DE INGENIERIA</p>
+		#if ($has_navigation)
+				#parse ("$full_templates_path/bottom_navigation.vm")
+		#end
+	</footer>
+</div>
+
+</body>
+
+$theme.include($bottom_include)
+
+</html>
