@@ -354,6 +354,14 @@ body #banner .logo a {
 	padding: 0px;
 }
 
+.portlet-column {
+	float: left;
+}
+
+.portlet-column-only {
+	width: 100%;
+}
+
 /* ---------- Footer ---------- */
 
 #footer {
