@@ -7,10 +7,13 @@
 /* ---------- Base styles ---------- */
 
 body {
+	font-size: 12px;
+}
+
+.customBG {
 	background: #e4e8ab url(../images/custom/fondo.jpg);
 	background-position: center top;
 	background-attachment: fixed;
-	font-size: 12px;
 }
 
 a {
@@ -293,27 +296,26 @@ body #banner .logo a {
 /* ---------- Portlet wrapper and icons ---------- */
 
 .portlet {
-	background-color: #EEF0F2;
-	border: 1px solid #C8C9CA;
 	margin: 0 0 10px;
 	padding: 3px;
 	text-align: left;
 }
 
 .portlet-topper {
-	background: #D4D4D4 url(../images/portlet/header_bg.png) repeat-x 0 0;
+	background: transparent url(../images/custom/banner_bg.jpg) no-repeat 20% 0;
 	border: 1px solid;
 	border-color: #C8C9CA #9E9E9E #9E9E9E #C8C9CA;
 	font-size: 1.1em;
 }
 
 .portlet-title {
-	color: #222;
+	color: white;
 	float: none;
 	font-weight: bold;
 	min-width: 50%;
 	padding: 5px;
-	text-shadow: 1px 1px #FFF;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .lfr-portlet-title-editable {
@@ -356,8 +358,16 @@ body #banner .logo a {
 	zoom: 1;
 }
 
+.portlet-column {
+	float: left;
+}
+
 .portlet-column-content {
 	padding: 0px;
+}
+
+.portlet-column-only {
+	width: 100%;
 }
 
 /* ---------- Footer ---------- */

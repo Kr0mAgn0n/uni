@@ -285,8 +285,6 @@ body #banner .logo a {
 /* ---------- Portlet wrapper and icons ---------- */
 
 .portlet {
-	/*background-color: #EEF0F2;
-	border: 1px solid #C8C9CA;*/
 	margin: 0 0 10px;
 	padding: 3px;
 	text-align: left;
@@ -305,7 +303,6 @@ body #banner .logo a {
 	font-weight: bold;
 	min-width: 50%;
 	padding: 5px;
-	//text-shadow: 1px 1px #FFF;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -441,4 +438,13 @@ body #banner .logo a {
 	-webkit-border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+}
+
+.idioma .icon {
+	background-image: url('/UNI-theme/images/custom/peru.png') !important;
+	background-position: 0px !important;
+}
+
+.cke_show_borders {
+	background: white !important;
 }
